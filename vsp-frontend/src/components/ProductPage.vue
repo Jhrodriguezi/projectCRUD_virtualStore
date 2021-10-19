@@ -141,12 +141,15 @@ export default {};
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
-  gap: 26px;
+  gap: 20px;
   place-content: center;
   padding: 100px 0 0 0;
 }
 .product-card {
-  width: 240px;
+  width: 270px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 20px;
 }
 .product-card img {
   width: 240px;

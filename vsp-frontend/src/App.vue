@@ -3,11 +3,11 @@
     <div class="header">
       <h1>Virtual Store</h1>
       <nav>
-        <button v-on:click="loadHome">Home</button>
-        <button v-on:click="loadLogIn">LogIn</button>
-        <button v-on:click="loadSignUp">SignUp</button>
-        <button v-on:click="loadMyOrder">MyOrder</button>
-        <button v-on:click="loadProductPage">Products</button>
+        <button v-if="is_auth" v-on:click="loadHome">Home</button>
+        <button v-if="!is_auth" v-on:click="loadLogIn">LogIn</button>
+        <button v-if="!is_auth" v-on:click="loadSignUp">SignUp</button>
+        <button v-if="is_auth" v-on:click="loadMyOrder">MyOrder</button>
+        <button v-if="is_auth" v-on:click="loadProductPage">Products</button>
       </nav>
     </div>
     <div class="main-component">
@@ -96,8 +96,6 @@ export default {
 }
 .app {
   height: 100vh;
-  background: center / cover no-repeat
-    url(https://images.pexels.com/photos/9072394/pexels-photo-9072394.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
 }
 
 .header {
@@ -142,5 +140,7 @@ export default {
 .main-component {
   background: #ffffff;
   height: 100vh;
+  background: center / cover no-repeat
+    url(https://images.pexels.com/photos/9072394/pexels-photo-9072394.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
 }
 </style>

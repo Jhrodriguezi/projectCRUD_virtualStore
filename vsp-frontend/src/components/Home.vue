@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav-home">
     <img src="../assets/icons/icon_menu.svg" alt="menu" class="menu" />
     <div class="navbar-left">
       <img src="../assets/logo.png" alt="logo" class="logo" />
@@ -52,11 +52,12 @@ export default {};
   --md: 16px;
   --lg: 18px;
 }
-nav {
+.nav-home {
   display: flex;
   justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
+  background-color: #fff;
 }
 .menu {
   display: none;

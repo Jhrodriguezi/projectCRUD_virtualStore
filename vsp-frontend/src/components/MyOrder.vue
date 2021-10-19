@@ -78,6 +78,9 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 20px;
 }
 .my-order-content {
   display: flex;
