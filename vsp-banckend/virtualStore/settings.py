@@ -104,10 +104,10 @@ WSGI_APPLICATION = 'virtualStore.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd9jt5d38ggob06',
-        'USER': 'yvzxnnnhkecxfd',
-        'PASSWORD': 'a9bfbe3a462d021f5a3720c81ec1763cebcfdf25e1f7506626fe2e01283b6d9c',
-        'HOST': 'ec2-23-23-162-138.compute-1.amazonaws.com',
+        'NAME': 'dba918s01koblp',
+        'USER': 'emumtrzzynhwxs',
+        'PASSWORD': '36773477cd2cfebe3cc44f4a749d40814b04699fc9ba9bed41ce424e2f011945',
+        'HOST': 'ec2-52-200-68-5.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
