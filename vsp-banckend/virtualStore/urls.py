@@ -18,7 +18,7 @@ from django.urls import path
 from virtualStoreApp.views import userView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-urlpatterns = {
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', TokenObtainPairView.as_view()),
     path('refresh/', TokenRefreshView.as_view()),
@@ -26,4 +26,4 @@ urlpatterns = {
     path('user/<int:pk>', userView.UserDetailView.as_view()),
     path('user/update/<int:pk>', userView.UserUpdateView.as_view()),
     path('user/delete/<int:pk>', userView.UserDeleteView.as_view()),
-}
+]

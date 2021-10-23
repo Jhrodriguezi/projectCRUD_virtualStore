@@ -30,7 +30,7 @@
         <a href="/">Forgot my password</a>
       </form>
 
-      <button class="secondary-button signup-button">Sign up</button>
+      <button class="secondary-button signup-button" v-on:click="loadSignUp">Sign up</button>
     </div>
     <p id="customAlert" class="customAlert"></p>
   </div>
@@ -53,7 +53,7 @@ export default {
   methods: {
     processLogInUser() {
       axios
-        .post('https://virtual-store-app.herokuapp.com/login/', this.user, {
+        .post('https://vsp-backend.herokuapp.com/login/', this.user, {
           headers: {},
         })
         .then((result) => {
@@ -71,6 +71,9 @@ export default {
             customAlert.innerText = 'Error 401: Credenciales incorrectas';
           }
         });
+    },
+    loadSignUp() {
+      this.$router.push({ name: 'signUp' });
     },
   },
 };

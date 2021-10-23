@@ -5,6 +5,7 @@ import SignUp from './components/SignUp.vue';
 import LogIn from './components/LogIn.vue';
 import MyOrder from './components/MyOrder.vue';
 import ProductPage from './components/ProductPage.vue';
+import UserSettings from './components/UserSettings.vue';
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/user/productPage',
     name: 'productPage',
     component: ProductPage,
+  },
+  {
+    path: '/user/mysettings',
+    name: 'userSettings',
+    component: UserSettings,
   },
 ];
 

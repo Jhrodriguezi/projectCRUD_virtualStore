@@ -23,6 +23,15 @@
             v-model="user.name"
           />
 
+          <label for="lastname" class="label">Lastname</label>
+          <input
+            type="text"
+            id="lastname"
+            placeholder="Your lastname"
+            class="input input-lastname"
+            v-model="user.lastname"
+          />
+
           <label for="email" class="label">Email</label>
           <input
             type="text"
@@ -64,6 +73,7 @@ export default {
       user: {
         username: '',
         name: '',
+        lastname:'',
         email: '',
         password: '',
       },
@@ -72,7 +82,7 @@ export default {
   methods: {
     processSignUpUser() {
       axios
-        .post('https://virtual-store-app.herokuapp.com/user/', this.user, {
+        .post('https://vsp-backend.herokuapp.com/user/', this.user, {
           headers: {},
         })
         .then((result) => {
@@ -154,6 +164,7 @@ body {
   margin-bottom: 12px;
 }
 .input-name,
+.input-lastname,
 .input-email,
 .input-password {
   margin-bottom: 22px;
